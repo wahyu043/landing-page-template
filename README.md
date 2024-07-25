@@ -1,2 +1,2 @@
 # landing-page-template
-Ini adalah latihan (lagi) upload
+Ini adalah latihan upload (lagi)
