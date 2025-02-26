@@ -1,0 +1,1876 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> TianRosandhy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.tianrosandhy.com/assets/css/aio.css?id=e17cbc59edb0e4a5993a">
+
+  <link rel="icon" href="https://www.tianrosandhy.com/assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="https://www.tianrosandhy.com/assets/images/logo.png" type="image/png">
+  <link rel="manifest" href="https://www.tianrosandhy.com/manifest.json">
+  <meta name="theme-color" content="#0AA3DB">
+  <meta property="og:url" content="https://www.tianrosandhy.com">
+  <meta property="og:title" content="TianRosandhy Website Developer">
+  <meta property="og:image" itemprop="image" content="https://tianrosandhy.com/storage/2020/06/banner-web-design.jpg">
+  <meta property="og:site_name" content="TianRosandhy Website Developer">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://www.tianrosandhy.com">
+  <meta name="twitter:title" content="TianRosandhy Website Developer">
+  <meta name="twitter:image" content="https://tianrosandhy.com/storage/2020/06/banner-web-design.jpg">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
+  <style type="text/css">
+    .lf-progress {
+      -webkit-appearance: none;
+      -moz-apperance: none;
+      width: 100%;
+      /* margin: 0 10px; */
+      height: 4px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .lf-progress:focus {
+      outline: none;
+      border: none;
+    }
+
+    .lf-progress::-moz-range-track {
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .lf-progress::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-moz-range-thumb {
+      -moz-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-ms-track {
+      width: 100%;
+      height: 3px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    .lf-progress::-ms-fill-lower {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-fill-upper {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-thumb {
+      border: 0;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress:focus::-ms-fill-lower {
+      background: #ccc;
+    }
+
+    .lf-progress:focus::-ms-fill-upper {
+      background: #ccc;
+    }
+
+    .lf-player-container :focus {
+      outline: 0;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-player-btn-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .lf-player-btn {
+      cursor: pointer;
+      fill: #999;
+      width: 14px;
+    }
+
+    .lf-player-btn.active {
+      fill: #555;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      background-color: #ffffff;
+      opacity: 1;
+
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      padding: 10px;
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-arrow {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      bottom: -9px;
+      border-style: solid;
+      border-width: 10px 10px 0px 10px;
+    }
+
+    .lf-left-align,
+    .lf-left-align .lfarrow {
+      left: 0;
+      right: unset;
+    }
+
+    .lf-right-align,
+    .lf-right-align .lf-arrow {
+      right: 0;
+      left: unset;
+    }
+
+    .lf-text-input {
+      border: 1px #ccc solid;
+      border-radius: 5px;
+      padding: 3px;
+      width: 60px;
+      margin: 0;
+    }
+
+    .lf-color-picker {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 90px;
+    }
+
+    .lf-color-selectors {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .lf-color-component {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lf-color-component strong {
+      width: 40px;
+    }
+
+    .lf-color-component input[type='range'] {
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-component input[type='number'] {
+      width: 50px;
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-preview {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5px;
+    }
+
+    .lf-preview {
+      height: 60px;
+      width: 60px;
+    }
+
+    .lf-popover-snapshot {
+      width: 150px;
+    }
+
+    .lf-popover-snapshot h5 {
+      margin: 5px 0 10px 0;
+      font-size: 0.75rem;
+    }
+
+    .lf-popover-snapshot a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .lf-popover-snapshot a:before {
+      content: '⥼';
+      margin-right: 5px;
+    }
+
+    .lf-popover-snapshot .lf-note {
+      display: block;
+      margin-top: 10px;
+      color: #999;
+    }
+
+    .lf-player-controls>div {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .lf-player-controls>div:first-child {
+      margin-left: 0px;
+    }
+
+    .lf-player-controls>div:last-child {
+      margin-right: 0px;
+    }
+  </style>
+  <style id="_goober">
+    @keyframes go2264125279 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go3020080000 {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go463499852 {
+      from {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(90deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go1268368563 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes go1310225428 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go651618207 {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      40% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        height: 10px;
+      }
+    }
+
+    @keyframes go901347462 {
+      from {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .go4109123758 {
+      z-index: 9999;
+    }
+
+    .go4109123758>* {
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="loaded">
+  <div class="loader">
+    <div class="loading-animation"></div>
+  </div>
+  <div class="navbar-container" style="min-height: 82px;">
+    <nav class="navbar navbar-expand-lg navbar-light position-fixed scrolled" data-sticky="top"
+      style="max-width: 1348px; top: 0px;">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="https://www.tianrosandhy.com">
+          <img alt="Jumpstart" src="https://www.tianrosandhy.com/assets/images/logo.png" style="height:40px;">
+        </a>
+
+        <div class="d-flex align-items-center order-lg-3">
+          <button aria-expanded="false" aria-label="Search" class="navbar-toggler mr-4" data-target="#search-modal"
+            data-toggle="modal" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+              height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/theme/general/search.svg">
+              <title>Icon For Search</title>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <path
+                  d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                  fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                <path
+                  d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                  fill="#000000" fill-rule="nonzero"></path>
+              </g>
+            </svg>
+          </button>
+
+          <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed"
+            data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/interface/icon-menu.svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M3 12H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+              <path d="M3 6H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3 18H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end" id="navigation-menu">
+          <ul class="navbar-nav my-3 my-lg-0">
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com" class="nav-link nav-item">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com/client" class="nav-link nav-item">My Projects</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown-grid" href="#" role="button"
+                  class="dropdown-toggle nav-link nav-item arrow-bottom">Our Blog</a>
+                <div class="row dropdown-menu" style="left: -920px;">
+                  <div class="col-auto" data-dropdown-content="" style="left: 920px;">
+                    <div class="dropdown-grid-menu">
+                      <a href="https://www.tianrosandhy.com/blog" class="dropdown-item fade-page">All Blog</a>
+                      <a href="https://www.tianrosandhy.com/blog/software" class="dropdown-item fade-page">Software</a>
+                      <a href="https://www.tianrosandhy.com/blog/programming"
+                        class="dropdown-item fade-page">Programming</a>
+                      <a href="https://www.tianrosandhy.com/blog/computer" class="dropdown-item fade-page">Computer</a>
+                      <a href="https://www.tianrosandhy.com/blog/tutorial" class="dropdown-item fade-page">Tutorial</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com/contact-us" class="nav-link nav-item">Contact Us</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a href="#" class="nav-link nav-item" data-toggle="modal" data-target="#search-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                  height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                  style="height:30px;"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/theme/general/search.svg">
+                  <title>Icon For Search</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <path
+                      d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                    <path
+                      d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                      fill="#000000" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section class="p-0 border-top border-bottom row no-gutters">
+    <div class="col-lg-7 col-xl-6">
+      <div class="container min-vh-lg-80 d-flex align-items-center">
+        <div class="row justify-content-center">
+          <div class="col col-md-10 col-xl-9 text-center text-lg-left">
+            <section>
+              <div data-aos="fade-right" class="aos-init aos-animate">
+                <h1 class="display-3">Bring Your <mark data-aos="highlight-text" data-aos-delay="500"
+                    class="aos-init aos-animate">Idea</mark> into <mark data-aos="highlight-text" data-aos-delay="1000"
+                    class="aos-init aos-animate">Reality</mark></h1>
+                <p class="lead">
+                  We provide best website service for your need. Easily create your own idea website with us.
+                </p>
+              </div>
+              <div
+                class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center justify-content-lg-start aos-init aos-animate"
+                data-aos="fade-right" data-aos-delay="1200">
+                <a href="#contact" class="btn btn-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Contact Us</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-xl-6 d-lg-flex flex-lg-column">
+      <div class="divider divider-side transform-flip-y bg-white d-none d-lg-block"></div>
+      <div class="d-lg-flex flex-column flex-fill controls-hover">
+        <img class="img-fluid full-cover" src="https://www.tianrosandhy.com/assets/images/web-banner-1.jpg" alt="Image">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="text-center mb-3">Our Services</h2>
+      <div class="row">
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/devices/display-1.svg">
+            <title>Icon For Display#1</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <path
+                d="M11,20 L11,17 C11,16.4477153 11.4477153,16 12,16 C12.5522847,16 13,16.4477153 13,17 L13,20 L15.5,20 C15.7761424,20 16,20.2238576 16,20.5 C16,20.7761424 15.7761424,21 15.5,21 L8.5,21 C8.22385763,21 8,20.7761424 8,20.5 C8,20.2238576 8.22385763,20 8.5,20 L11,20 Z"
+                fill="#000000" opacity="0.3"></path>
+              <path
+                d="M3,5 L21,5 C21.5522847,5 22,5.44771525 22,6 L22,16 C22,16.5522847 21.5522847,17 21,17 L3,17 C2.44771525,17 2,16.5522847 2,16 L2,6 C2,5.44771525 2.44771525,5 3,5 Z M4.5,8 C4.22385763,8 4,8.22385763 4,8.5 C4,8.77614237 4.22385763,9 4.5,9 L13.5,9 C13.7761424,9 14,8.77614237 14,8.5 C14,8.22385763 13.7761424,8 13.5,8 L4.5,8 Z M4.5,10 C4.22385763,10 4,10.2238576 4,10.5 C4,10.7761424 4.22385763,11 4.5,11 L7.5,11 C7.77614237,11 8,10.7761424 8,10.5 C8,10.2238576 7.77614237,10 7.5,10 L4.5,10 Z"
+                fill="#000000"></path>
+            </g>
+          </svg>
+          <h5>Web Development</h5>
+          <p>We create and develop custom made website for any need. Simple or complex website is possible with us</p>
+        </div>
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/tools/tools.svg">
+            <title>Icon For Tools</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <path
+                d="M15.9497475,3.80761184 L13.0246125,6.73274681 C12.2435639,7.51379539 12.2435639,8.78012535 13.0246125,9.56117394 L14.4388261,10.9753875 C15.2198746,11.7564361 16.4862046,11.7564361 17.2672532,10.9753875 L20.1923882,8.05025253 C20.7341101,10.0447871 20.2295941,12.2556873 18.674559,13.8107223 C16.8453326,15.6399488 14.1085592,16.0155296 11.8839934,14.9444337 L6.75735931,20.0710678 C5.97631073,20.8521164 4.70998077,20.8521164 3.92893219,20.0710678 C3.1478836,19.2900192 3.1478836,18.0236893 3.92893219,17.2426407 L9.05556629,12.1160066 C7.98447038,9.89144078 8.36005124,7.15466739 10.1892777,5.32544095 C11.7443127,3.77040588 13.9552129,3.26588995 15.9497475,3.80761184 Z"
+                fill="#000000"></path>
+              <path
+                d="M16.6568542,5.92893219 L18.0710678,7.34314575 C18.4615921,7.73367004 18.4615921,8.36683502 18.0710678,8.75735931 L16.6913928,10.1370344 C16.3008685,10.5275587 15.6677035,10.5275587 15.2771792,10.1370344 L13.8629656,8.7228208 C13.4724413,8.33229651 13.4724413,7.69913153 13.8629656,7.30860724 L15.2426407,5.92893219 C15.633165,5.5384079 16.26633,5.5384079 16.6568542,5.92893219 Z"
+                fill="#000000" opacity="0.3"></path>
+            </g>
+          </svg>
+          <h5>Web Maintenance</h5>
+          <p>We help to keep your website in good shape and give better impact to your audience</p>
+        </div>
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/shopping/chart-bar-2.svg">
+            <title>Icon For Chart-bar#2</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <rect fill="#000000" opacity="0.3" x="17" y="4" width="3" height="13" rx="1.5"></rect>
+              <rect fill="#000000" opacity="0.3" x="12" y="9" width="3" height="8" rx="1.5"></rect>
+              <path
+                d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z"
+                fill="#000000" fill-rule="nonzero"></path>
+              <rect fill="#000000" opacity="0.3" x="7" y="11" width="3" height="6" rx="1.5"></rect>
+            </g>
+          </svg>
+          <h5>Web Application</h5>
+          <p>We can create business logic application for your needs with web-based, so you can access them anytime
+            anywhere</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 text-center mb-3">
+          <h2>My Projects</h2>
+        </div>
+      </div>
+
+      <div data-flickity="{&quot;imagesLoaded&quot; : true, &quot;wrapAround&quot; : true, &quot;autoPlay&quot; : 2000}"
+        class="highlight-selected flickity-enabled is-draggable" tabindex="0">
+
+
+
+
+
+
+
+
+
+
+        <div class="flickity-viewport" style="height: 290px; touch-action: pan-y;">
+          <div class="flickity-slider" style="left: 0px; transform: translate3d(38.63%, 0px, 0px);">
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 0%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/jakarta-eye-center">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2022/04/jec-logo-small.jpg" alt="Jakarta Eye Center"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2022/04/jec-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/jakarta-eye-center"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Jakarta Eye Center</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6 is-selected"
+              style="position: absolute; left: 16.67%;">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/koperasi-pegawai-pasar-jaya">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2023/05/logo-pasar-jaya-small.jpg"
+                    alt="Koperasi Pegawai Pasar Jaya" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2023/05/logo-pasar-jaya-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/koperasi-pegawai-pasar-jaya"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Koperasi Pegawai Pasar Jaya</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 33.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/pgn-risk-management">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/pgn-logo-small.jpg" alt="PGN Risk Management"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2020/07/pgn-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/pgn-risk-management"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>PGN Risk Management</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 50%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/gkka-whatsapp-chatbot">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/08/gkka-chatbot-logo-small.jpg"
+                    alt="GKKA Registration System" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/08/gkka-chatbot-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/gkka-whatsapp-chatbot"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Whatsapp
+                      Chatbot</small><br><span>GKKA Registration System</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 66.67%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/pithecanthropus-bali">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/pithecanthropus-bali-logo-small.jpg"
+                    alt="Pithecanthropus Bali" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/pithecanthropus-bali-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/pithecanthropus-bali"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Maintenance</small><br><span>Pithecanthropus Bali</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 83.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/human-resource-system-citra-warna">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/citra-warna-logo-small.jpg"
+                    alt="Human Resource System Citra Warna" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/citra-warna-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/human-resource-system-citra-warna"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Human Resource System Citra Warna</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 100%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/matapedia">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2022/10/logo-matapedia-small.jpg" alt="Matapedia"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2022/10/logo-matapedia-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/matapedia" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Web Application</small><br><span>Matapedia</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: -50%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/simple-inventory">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/simple-inventory-logo-small.jpg"
+                    alt="Simple Inventory" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/simple-inventory-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/simple-inventory" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Software as a Service</small><br><span>Simple Inventory</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: -33.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/bali-puspa-news">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/balipuspanews-logo-f3fb45c90b-small.jpg"
+                    alt="Bali Puspa News" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/balipuspanews-logo-f3fb45c90b-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/bali-puspa-news" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Web Maintenance</small><br><span>Bali Puspa News</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: -16.67%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/13thshoes">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/13thshoes-logo-small.jpg" alt="13thshoes"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2020/07/13thshoes-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/13thshoes" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">e-Commerce</small><br><span>13thshoes</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><button class="flickity-button flickity-prev-next-button previous" type="button"
+          aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+          </svg></button><button class="flickity-button flickity-prev-next-button next" type="button"
+          aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+              transform="translate(100, 100) rotate(180) "></path>
+          </svg></button>
+        <ol class="flickity-page-dots">
+          <li class="dot" aria-label="Page dot 1"></li>
+          <li class="dot is-selected" aria-label="Page dot 2" aria-current="step"></li>
+          <li class="dot" aria-label="Page dot 3"></li>
+          <li class="dot" aria-label="Page dot 4"></li>
+          <li class="dot" aria-label="Page dot 5"></li>
+          <li class="dot" aria-label="Page dot 6"></li>
+          <li class="dot" aria-label="Page dot 7"></li>
+          <li class="dot" aria-label="Page dot 8"></li>
+          <li class="dot" aria-label="Page dot 9"></li>
+          <li class="dot" aria-label="Page dot 10"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary-3 text-white">
+    <div class="container">
+      <div class="row section-title justify-content-center text-center">
+        <div class="col-md-9 col-lg-8 col-xl-7">
+          <h2>Our Blog</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center blog-container" data-page="1">
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2023/09/pexels-database-denormalisasi-thumb.jpg"
+              alt="Denormalisasi Database: Tidak Selamanya Normalisasi itu Baik" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">1 week ago</div>
+              <a href="https://www.tianrosandhy.com/denormalisasi-database-tidak-selamanya-normalisasi-itu-baik">
+                <h3 class="h2">Denormalisasi Database: Tidak Selamanya Normalisasi itu Baik</h3>
+              </a>
+              <p>
+                Tentu kita sudah sering mendengar tentang "normalisasi" sebagai praktik penting dalam perancangan
+                database, akan tetapi ada pendekatan berbeda yang perlu dipertimbangkan yaitu : Denormalisasi.
+              </p>
+              <a href="https://www.tianrosandhy.com/denormalisasi-database-tidak-selamanya-normalisasi-itu-baik"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2023/05/pexels-ekaterina-belinskaya-4700400-thumb.jpg"
+              alt="Sistem Kasir Nota Digital Laundry dengan Whatsapp Chatbot" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">3 months ago</div>
+              <a href="https://www.tianrosandhy.com/sistem-nota-digital-laundry-dengan-whatsapp-chatbot">
+                <h3 class="h2">Sistem Kasir Nota Digital Laundry dengan Whatsapp Chatbot</h3>
+              </a>
+              <p>
+                Ucapkan selamat tinggal pada printer dan penggunaan kertas, dengan sistem nota digital ini Anda dapat
+                memberikan nota digital ke pelanggan usaha laundry Anda dengan 1 klik saja.
+              </p>
+              <a href="https://www.tianrosandhy.com/sistem-nota-digital-laundry-dengan-whatsapp-chatbot"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2022/11/pexels-lukas-669613-thumb.jpg"
+              alt="Sistem Survey &amp; Form Generator Online (Like Google Form)" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">9 months ago</div>
+              <a href="https://www.tianrosandhy.com/sistem-survey-form-generator-online-like-google-form">
+                <h3 class="h2">Sistem Survey &amp; Form Generator Online (Like Google Form)</h3>
+              </a>
+              <p>
+                Sistem Survey &amp; Form Generator Online merupakan sebuah sistem yang dirancang untuk mengumpulkan data
+                berupa formulir atau survey yang dapat kita rancang sendiri ke public secara anonim
+              </p>
+              <a href="https://www.tianrosandhy.com/sistem-survey-form-generator-online-like-google-form"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2022/10/pexels-cottonbro-4709289-thumb.jpg"
+              alt="6 Prinsip Dasar Wajib Pemrograman" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">10 months ago</div>
+              <a href="https://www.tianrosandhy.com/6-prinsip-dasar-wajib-pemrograman">
+                <h3 class="h2">6 Prinsip Dasar Wajib Pemrograman</h3>
+              </a>
+              <p>
+                Programming adalah seni. Ketika kita coding sembarangan dengan tujuan hanya asal jadi, siap-siap saja
+                suatu saat nanti kita akan kesulitan sendiri karena codingan kita yang sembarangan dan sulit diref
+              </p>
+              <a href="https://www.tianrosandhy.com/6-prinsip-dasar-wajib-pemrograman" class="stretched-link">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" data-loadmore="">
+        <a href="https://www.tianrosandhy.com/blog" class="btn btn-primary">- Load More -</a>
+        <div class="loader-container text-center">
+          <div class="loader animated">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+              height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/theme/navigation/waiting.svg">
+              <title>Icon For Waiting</title>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <path
+                  d="M19.5,10.5 L21,10.5 C21.8284271,10.5 22.5,11.1715729 22.5,12 C22.5,12.8284271 21.8284271,13.5 21,13.5 L19.5,13.5 C18.6715729,13.5 18,12.8284271 18,12 C18,11.1715729 18.6715729,10.5 19.5,10.5 Z M16.0606602,5.87132034 L17.1213203,4.81066017 C17.7071068,4.22487373 18.6568542,4.22487373 19.2426407,4.81066017 C19.8284271,5.39644661 19.8284271,6.34619408 19.2426407,6.93198052 L18.1819805,7.99264069 C17.5961941,8.57842712 16.6464466,8.57842712 16.0606602,7.99264069 C15.4748737,7.40685425 15.4748737,6.45710678 16.0606602,5.87132034 Z M16.0606602,18.1819805 C15.4748737,17.5961941 15.4748737,16.6464466 16.0606602,16.0606602 C16.6464466,15.4748737 17.5961941,15.4748737 18.1819805,16.0606602 L19.2426407,17.1213203 C19.8284271,17.7071068 19.8284271,18.6568542 19.2426407,19.2426407 C18.6568542,19.8284271 17.7071068,19.8284271 17.1213203,19.2426407 L16.0606602,18.1819805 Z M3,10.5 L4.5,10.5 C5.32842712,10.5 6,11.1715729 6,12 C6,12.8284271 5.32842712,13.5 4.5,13.5 L3,13.5 C2.17157288,13.5 1.5,12.8284271 1.5,12 C1.5,11.1715729 2.17157288,10.5 3,10.5 Z M12,1.5 C12.8284271,1.5 13.5,2.17157288 13.5,3 L13.5,4.5 C13.5,5.32842712 12.8284271,6 12,6 C11.1715729,6 10.5,5.32842712 10.5,4.5 L10.5,3 C10.5,2.17157288 11.1715729,1.5 12,1.5 Z M12,18 C12.8284271,18 13.5,18.6715729 13.5,19.5 L13.5,21 C13.5,21.8284271 12.8284271,22.5 12,22.5 C11.1715729,22.5 10.5,21.8284271 10.5,21 L10.5,19.5 C10.5,18.6715729 11.1715729,18 12,18 Z M4.81066017,4.81066017 C5.39644661,4.22487373 6.34619408,4.22487373 6.93198052,4.81066017 L7.99264069,5.87132034 C8.57842712,6.45710678 8.57842712,7.40685425 7.99264069,7.99264069 C7.40685425,8.57842712 6.45710678,8.57842712 5.87132034,7.99264069 L4.81066017,6.93198052 C4.22487373,6.34619408 4.22487373,5.39644661 4.81066017,4.81066017 Z M4.81066017,19.2426407 C4.22487373,18.6568542 4.22487373,17.7071068 4.81066017,17.1213203 L5.87132034,16.0606602 C6.45710678,15.4748737 7.40685425,15.4748737 7.99264069,16.0606602 C8.57842712,16.6464466 8.57842712,17.5961941 7.99264069,18.1819805 L6.93198052,19.2426407 C6.34619408,19.8284271 5.39644661,19.8284271 4.81066017,19.2426407 Z"
+                  fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-dark text-white" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-xs-11 text-center">
+          <h2>Contact Us</h2>
+          <p class="lead">Do you have some question, or project you wanna discuss with me? <mark
+              data-aos="highlight-text" data-aos-delay="1000" class="aos-init">Please fill the form, or chat me
+              now.</mark></p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-11">
+          <div class="text-center after-send-contact" style="display:none;">
+            <div class="alert alert-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                data-src="https://www.tianrosandhy.com/assets/images/icons/theme/communication/sending-mail.svg">
+                <title>Icon For Sending mail</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                  <path
+                    d="M4,16 L5,16 C5.55228475,16 6,16.4477153 6,17 C6,17.5522847 5.55228475,18 5,18 L4,18 C3.44771525,18 3,17.5522847 3,17 C3,16.4477153 3.44771525,16 4,16 Z M1,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L1,13 C0.44771525,13 6.76353751e-17,12.5522847 0,12 C-6.76353751e-17,11.4477153 0.44771525,11 1,11 Z M3,6 L5,6 C5.55228475,6 6,6.44771525 6,7 C6,7.55228475 5.55228475,8 5,8 L3,8 C2.44771525,8 2,7.55228475 2,7 C2,6.44771525 2.44771525,6 3,6 Z"
+                    fill="#000000" opacity="0.3"></path>
+                  <path
+                    d="M10,6 L22,6 C23.1045695,6 24,6.8954305 24,8 L24,16 C24,17.1045695 23.1045695,18 22,18 L10,18 C8.8954305,18 8,17.1045695 8,16 L8,8 C8,6.8954305 8.8954305,6 10,6 Z M21.0849395,8.0718316 L16,10.7185839 L10.9150605,8.0718316 C10.6132433,7.91473331 10.2368262,8.02389331 10.0743092,8.31564728 C9.91179228,8.60740125 10.0247174,8.9712679 10.3265346,9.12836619 L15.705737,11.9282847 C15.8894428,12.0239051 16.1105572,12.0239051 16.294263,11.9282847 L21.6734654,9.12836619 C21.9752826,8.9712679 22.0882077,8.60740125 21.9256908,8.31564728 C21.7631738,8.02389331 21.3867567,7.91473331 21.0849395,8.0718316 Z"
+                    fill="#000000"></path>
+                </g>
+              </svg>
+              <h5>Thank You</h5>
+              <p>Your message has been sent, we will check them later.</p>
+            </div>
+          </div>
+          <form action="" class="contact-form" method="post">
+            <input type="hidden" name="_token" value="LQjg6JoVnBkZm27CqiXc0ydjl3Kly3M55vREkchr">
+            <input type="hidden" name="a"
+              value="eyJpdiI6Im84TEJVWW9mMEkvSnNWWG5aTnE0OUE9PSIsInZhbHVlIjoiYncrOXFvUE1mNEI2V2FzRkMxZW05Zz09IiwibWFjIjoiNzhjYzBmMDc0YzdkMDRiOGNlZmQ5NjU4ZjhmMGNhN2RjNWQ4NGM0ZjNjZjExOTA0MTAzYzI2MWU1ZTdlMTIwYiJ9">
+            <input type="text" name="b" class="form-control" tabindex="-1" style="position:absolute; left:-78126px;">
+            <input type="hidden" name="c"
+              value="eyJpdiI6IkU0UUkvK3ordmZBRGJJamRyVTFrVHc9PSIsInZhbHVlIjoiZlF2a3J2bU9lajdIckQyQkVwa2Jtem1VaXd3YWpOZ3AzRU9LRGxkeGl0Y2tDb1o4SisvZUJncVdBcDdybFVyaCIsIm1hYyI6ImY5NDE4OTVmZjQ0MmU2ZjlkZWYwZGI5NWE4M2M3OGQ1YjhmYzU3YzZkNmFhYTc2MWYxOGMwM2ViYjNiNTJiYTQifQ==">
+
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="mandatory">Full Name</label>
+                  <input data-required="" type="text" name="full_name" class="form-control" maxlength="50">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                  <label class="mandatory">Your Email</label>
+                  <input data-required="" type="email" name="email" class="form-control" maxlength="50">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="phone" class="form-control" maxlength="15">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="mandatory">Your Message</label>
+              <textarea data-required="" name="message" maxlength="500" class="form-control"
+                placeholder="Type your message here" data-gramm="false" wt-ignore-input="true"></textarea>
+            </div>
+            <div class="padd my-3 text-right contact-buttons">
+              <!-- <a href="#" class="btn btn-success btn-chat-whatsapp">Chat via Whatsapp</a> -->
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </div>
+            <div class="loader-container text-right">
+              <div class="loader animated">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                  height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/theme/navigation/waiting.svg">
+                  <title>Icon For Waiting</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <path
+                      d="M19.5,10.5 L21,10.5 C21.8284271,10.5 22.5,11.1715729 22.5,12 C22.5,12.8284271 21.8284271,13.5 21,13.5 L19.5,13.5 C18.6715729,13.5 18,12.8284271 18,12 C18,11.1715729 18.6715729,10.5 19.5,10.5 Z M16.0606602,5.87132034 L17.1213203,4.81066017 C17.7071068,4.22487373 18.6568542,4.22487373 19.2426407,4.81066017 C19.8284271,5.39644661 19.8284271,6.34619408 19.2426407,6.93198052 L18.1819805,7.99264069 C17.5961941,8.57842712 16.6464466,8.57842712 16.0606602,7.99264069 C15.4748737,7.40685425 15.4748737,6.45710678 16.0606602,5.87132034 Z M16.0606602,18.1819805 C15.4748737,17.5961941 15.4748737,16.6464466 16.0606602,16.0606602 C16.6464466,15.4748737 17.5961941,15.4748737 18.1819805,16.0606602 L19.2426407,17.1213203 C19.8284271,17.7071068 19.8284271,18.6568542 19.2426407,19.2426407 C18.6568542,19.8284271 17.7071068,19.8284271 17.1213203,19.2426407 L16.0606602,18.1819805 Z M3,10.5 L4.5,10.5 C5.32842712,10.5 6,11.1715729 6,12 C6,12.8284271 5.32842712,13.5 4.5,13.5 L3,13.5 C2.17157288,13.5 1.5,12.8284271 1.5,12 C1.5,11.1715729 2.17157288,10.5 3,10.5 Z M12,1.5 C12.8284271,1.5 13.5,2.17157288 13.5,3 L13.5,4.5 C13.5,5.32842712 12.8284271,6 12,6 C11.1715729,6 10.5,5.32842712 10.5,4.5 L10.5,3 C10.5,2.17157288 11.1715729,1.5 12,1.5 Z M12,18 C12.8284271,18 13.5,18.6715729 13.5,19.5 L13.5,21 C13.5,21.8284271 12.8284271,22.5 12,22.5 C11.1715729,22.5 10.5,21.8284271 10.5,21 L10.5,19.5 C10.5,18.6715729 11.1715729,18 12,18 Z M4.81066017,4.81066017 C5.39644661,4.22487373 6.34619408,4.22487373 6.93198052,4.81066017 L7.99264069,5.87132034 C8.57842712,6.45710678 8.57842712,7.40685425 7.99264069,7.99264069 C7.40685425,8.57842712 6.45710678,8.57842712 5.87132034,7.99264069 L4.81066017,6.93198052 C4.22487373,6.34619408 4.22487373,5.39644661 4.81066017,4.81066017 Z M4.81066017,19.2426407 C4.22487373,18.6568542 4.22487373,17.7071068 4.81066017,17.1213203 L5.87132034,16.0606602 C6.45710678,15.4748737 7.40685425,15.4748737 7.99264069,16.0606602 C8.57842712,16.6464466 8.57842712,17.5961941 7.99264069,18.1819805 L6.93198052,19.2426407 C6.34619408,19.8284271 5.39644661,19.8284271 4.81066017,19.2426407 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary-3 text-white links-white py-3 footer-1">
+    <div class="container">
+      <div
+        class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+        <div class="col-auto">
+          <div class="d-flex flex-column flex-sm-row align-items-center text-small">
+            <div class="text-muted">© 2023 Page protected by reCAPTCHA and subject to Google's <a
+                href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy</a> and <a
+                href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto mt-3 mt-lg-0">
+          <ul class="list-unstyled d-flex mb-0">
+            <li class="mx-3">
+              <a href="https://github.com/tianrosandhy" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/github.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="https://facebook.com/tianEXE" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/facebook.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M13.789 23.9943V13.0493H17.3269L17.8566 8.78383H13.789V6.06047C13.789 4.82555 14.1192 3.98389 15.8248 3.98389L18 3.98284V0.167893C17.6236 0.1161 16.3325 0 14.8304 0C11.6942 0 9.54712 1.98771 9.54712 5.63825V8.78395H6V13.0494H9.54701V23.9944L13.789 23.9943Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="https://instagram.com/tianrosandhy" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/instagram.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M12 0C8.74 0 8.333 0.015 7.053 0.072C5.775 0.132 4.905 0.333 4.14 0.63C3.351 0.936 2.681 1.347 2.014 2.014C1.347 2.681 0.935 3.35 0.63 4.14C0.333 4.905 0.131 5.775 0.072 7.053C0.012 8.333 0 8.74 0 12C0 15.26 0.015 15.667 0.072 16.947C0.132 18.224 0.333 19.095 0.63 19.86C0.936 20.648 1.347 21.319 2.014 21.986C2.681 22.652 3.35 23.065 4.14 23.37C4.906 23.666 5.776 23.869 7.053 23.928C8.333 23.988 8.74 24 12 24C15.26 24 15.667 23.985 16.947 23.928C18.224 23.868 19.095 23.666 19.86 23.37C20.648 23.064 21.319 22.652 21.986 21.986C22.652 21.319 23.065 20.651 23.37 19.86C23.666 19.095 23.869 18.224 23.928 16.947C23.988 15.667 24 15.26 24 12C24 8.74 23.985 8.333 23.928 7.053C23.868 5.776 23.666 4.904 23.37 4.14C23.064 3.351 22.652 2.681 21.986 2.014C21.319 1.347 20.651 0.935 19.86 0.63C19.095 0.333 18.224 0.131 16.947 0.072C15.667 0.012 15.26 0 12 0ZM12 2.16C15.203 2.16 15.585 2.176 16.85 2.231C18.02 2.286 18.655 2.48 19.077 2.646C19.639 2.863 20.037 3.123 20.459 3.542C20.878 3.962 21.138 4.361 21.355 4.923C21.519 5.345 21.715 5.98 21.768 7.15C21.825 8.416 21.838 8.796 21.838 12C21.838 15.204 21.823 15.585 21.764 16.85C21.703 18.02 21.508 18.655 21.343 19.077C21.119 19.639 20.864 20.037 20.444 20.459C20.025 20.878 19.62 21.138 19.064 21.355C18.644 21.519 17.999 21.715 16.829 21.768C15.555 21.825 15.18 21.838 11.97 21.838C8.759 21.838 8.384 21.823 7.111 21.764C5.94 21.703 5.295 21.508 4.875 21.343C4.306 21.119 3.915 20.864 3.496 20.444C3.075 20.025 2.806 19.62 2.596 19.064C2.431 18.644 2.237 17.999 2.176 16.829C2.131 15.569 2.115 15.18 2.115 11.985C2.115 8.789 2.131 8.399 2.176 7.124C2.237 5.954 2.431 5.31 2.596 4.89C2.806 4.32 3.075 3.93 3.496 3.509C3.915 3.09 4.306 2.82 4.875 2.611C5.295 2.445 5.926 2.25 7.096 2.19C8.371 2.145 8.746 2.13 11.955 2.13L12 2.16ZM12 5.838C8.595 5.838 5.838 8.598 5.838 12C5.838 15.405 8.598 18.162 12 18.162C15.405 18.162 18.162 15.402 18.162 12C18.162 8.595 15.402 5.838 12 5.838ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16ZM19.846 5.595C19.846 6.39 19.2 7.035 18.406 7.035C17.611 7.035 16.966 6.389 16.966 5.595C16.966 4.801 17.612 4.156 18.406 4.156C19.199 4.155 19.846 4.801 19.846 5.595Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6289622224614" style="position:fixed; bottom:2rem; left:2rem; z-index:2"
+    title="Chat via Whatsapp" data-toggle="tooltip" data-placement="right">
+    <img src="https://www.tianrosandhy.com/assets/images/icons/social/whatsapp.svg" width="45" height="45">
+  </a>
+
+  <div id="offline-overlay" style="display:none;"></div>
+
+  <!-- service worker notification alert -->
+  <div id="notification-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="notification-title">New Updates are available</p>
+        </div>
+        <div class="col-sm-6 text-right">
+          <a href="#" class="btn btn-sm btn-primary refresh-btn">Refresh</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- service worker offline/online notification -->
+  <div id="offline-notification" class="online">
+    <div class="offline-wrapper bg-danger text-white">
+      <div class="container-fluid">
+        Oops, your internet is disconnected. Please check your signal
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="https://www.tianrosandhy.com/search" class="site-search">
+            <div class="input-group">
+              <input type="search" maxlength="30" required="" name="keyword" class="form-control"
+                placeholder="Type your search keyword here">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top aos-init" data-smooth-scroll=""
+    data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      class="injected-svg icon bg-white"
+      data-src="https://www.tianrosandhy.com/assets/images/icons/interface/icon-arrow-up.svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M5 12L12 5L19 12M12 19V6V19Z" stroke="#2C3038" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </a>
+  <script src="https://www.tianrosandhy.com/assets/js/aio.js?v=1.0.0"></script>
+  <link rel="stylesheet" type="text/css" href="https://www.tianrosandhy.com/xoric/libs/prism/prism.css">
+  <script src="https://www.tianrosandhy.com/xoric/libs/prism/prism.js"></script>
+
+  <!-- Removes page load animation when window is finished loading -->
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      document.querySelector('body').classList.add('loaded');
+    });
+    var BASE_URL = 'https://www.tianrosandhy.com';
+    var CSRF_TOKEN = 'LQjg6JoVnBkZm27CqiXc0ydjl3Kly3M55vREkchr';
+    $(function () {
+      $("head").append('<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">');
+    });
+  </script>
+
+  <script>
+    if (navigator) {
+      var ONLINE_STAT = navigator.onLine ?? false;
+    }
+    else {
+      var ONLINE_STAT = true;
+    }
+    window.addEventListener('online', (evt) => {
+      if (!window.ONLINE_STAT) {
+        //change to online action
+        $("#offline-overlay").fadeOut();
+        $("#offline-notification").addClass('online');
+      }
+      window.ONLINE_STAT = true;
+    });
+    window.addEventListener('offline', (evt) => {
+      if (window.ONLINE_STAT) {
+        //change to offline action
+        $("#offline-overlay").fadeIn();
+        $("#offline-notification").removeClass('online');
+      }
+      window.ONLINE_STAT = false;
+    });
+  </script>
+
+
+
+
+</body><quillbot-extension-portal></quillbot-extension-portal><quillbot-extension-root></quillbot-extension-root>
+
+</html>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="loaded">
+  <div class="loader">
+    <div class="loading-animation"></div>
+  </div>
+  <div class="navbar-container" style="min-height: 82px;">
+    <nav class="navbar navbar-expand-lg navbar-light position-fixed scrolled" data-sticky="top"
+      style="max-width: 1348px; top: 0px;">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="https://www.tianrosandhy.com">
+          <img alt="Jumpstart" src="https://www.tianrosandhy.com/assets/images/logo.png" style="height:40px;">
+        </a>
+
+        <div class="d-flex align-items-center order-lg-3">
+          <button aria-expanded="false" aria-label="Search" class="navbar-toggler mr-4" data-target="#search-modal"
+            data-toggle="modal" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+              height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/theme/general/search.svg">
+              <title>Icon For Search</title>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <path
+                  d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                  fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                <path
+                  d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                  fill="#000000" fill-rule="nonzero"></path>
+              </g>
+            </svg>
+          </button>
+
+          <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed"
+            data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/interface/icon-menu.svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M3 12H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+              <path d="M3 6H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3 18H21" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end" id="navigation-menu">
+          <ul class="navbar-nav my-3 my-lg-0">
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com" class="nav-link nav-item">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com/client" class="nav-link nav-item">My Projects</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown-grid" href="#" role="button"
+                  class="dropdown-toggle nav-link nav-item arrow-bottom">Our Blog</a>
+                <div class="row dropdown-menu" style="left: -920px;">
+                  <div class="col-auto" data-dropdown-content="" style="left: 920px;">
+                    <div class="dropdown-grid-menu">
+                      <a href="https://www.tianrosandhy.com/blog" class="dropdown-item fade-page">All Blog</a>
+                      <a href="https://www.tianrosandhy.com/blog/software" class="dropdown-item fade-page">Software</a>
+                      <a href="https://www.tianrosandhy.com/blog/programming"
+                        class="dropdown-item fade-page">Programming</a>
+                      <a href="https://www.tianrosandhy.com/blog/computer" class="dropdown-item fade-page">Computer</a>
+                      <a href="https://www.tianrosandhy.com/blog/tutorial" class="dropdown-item fade-page">Tutorial</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.tianrosandhy.com/contact-us" class="nav-link nav-item">Contact Us</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a href="#" class="nav-link nav-item" data-toggle="modal" data-target="#search-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                  height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                  style="height:30px;"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/theme/general/search.svg">
+                  <title>Icon For Search</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <path
+                      d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                    <path
+                      d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                      fill="#000000" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section class="p-0 border-top border-bottom row no-gutters">
+    <div class="col-lg-7 col-xl-6">
+      <div class="container min-vh-lg-80 d-flex align-items-center">
+        <div class="row justify-content-center">
+          <div class="col col-md-10 col-xl-9 text-center text-lg-left">
+            <section>
+              <div data-aos="fade-right" class="aos-init aos-animate">
+                <h1 class="display-3">Bring Your <mark data-aos="highlight-text" data-aos-delay="500"
+                    class="aos-init aos-animate">Idea</mark> into <mark data-aos="highlight-text" data-aos-delay="1000"
+                    class="aos-init aos-animate">Reality</mark></h1>
+                <p class="lead">
+                  We provide best website service for your need. Easily create your own idea website with us.
+                </p>
+              </div>
+              <div
+                class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center justify-content-lg-start aos-init aos-animate"
+                data-aos="fade-right" data-aos-delay="1200">
+                <a href="#contact" class="btn btn-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Contact Us</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-xl-6 d-lg-flex flex-lg-column">
+      <div class="divider divider-side transform-flip-y bg-white d-none d-lg-block"></div>
+      <div class="d-lg-flex flex-column flex-fill controls-hover">
+        <img class="img-fluid full-cover" src="https://www.tianrosandhy.com/assets/images/web-banner-1.jpg" alt="Image">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="text-center mb-3">Our Services</h2>
+      <div class="row">
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/devices/display-1.svg">
+            <title>Icon For Display#1</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <path
+                d="M11,20 L11,17 C11,16.4477153 11.4477153,16 12,16 C12.5522847,16 13,16.4477153 13,17 L13,20 L15.5,20 C15.7761424,20 16,20.2238576 16,20.5 C16,20.7761424 15.7761424,21 15.5,21 L8.5,21 C8.22385763,21 8,20.7761424 8,20.5 C8,20.2238576 8.22385763,20 8.5,20 L11,20 Z"
+                fill="#000000" opacity="0.3"></path>
+              <path
+                d="M3,5 L21,5 C21.5522847,5 22,5.44771525 22,6 L22,16 C22,16.5522847 21.5522847,17 21,17 L3,17 C2.44771525,17 2,16.5522847 2,16 L2,6 C2,5.44771525 2.44771525,5 3,5 Z M4.5,8 C4.22385763,8 4,8.22385763 4,8.5 C4,8.77614237 4.22385763,9 4.5,9 L13.5,9 C13.7761424,9 14,8.77614237 14,8.5 C14,8.22385763 13.7761424,8 13.5,8 L4.5,8 Z M4.5,10 C4.22385763,10 4,10.2238576 4,10.5 C4,10.7761424 4.22385763,11 4.5,11 L7.5,11 C7.77614237,11 8,10.7761424 8,10.5 C8,10.2238576 7.77614237,10 7.5,10 L4.5,10 Z"
+                fill="#000000"></path>
+            </g>
+          </svg>
+          <h5>Web Development</h5>
+          <p>We create and develop custom made website for any need. Simple or complex website is possible with us</p>
+        </div>
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/tools/tools.svg">
+            <title>Icon For Tools</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <path
+                d="M15.9497475,3.80761184 L13.0246125,6.73274681 C12.2435639,7.51379539 12.2435639,8.78012535 13.0246125,9.56117394 L14.4388261,10.9753875 C15.2198746,11.7564361 16.4862046,11.7564361 17.2672532,10.9753875 L20.1923882,8.05025253 C20.7341101,10.0447871 20.2295941,12.2556873 18.674559,13.8107223 C16.8453326,15.6399488 14.1085592,16.0155296 11.8839934,14.9444337 L6.75735931,20.0710678 C5.97631073,20.8521164 4.70998077,20.8521164 3.92893219,20.0710678 C3.1478836,19.2900192 3.1478836,18.0236893 3.92893219,17.2426407 L9.05556629,12.1160066 C7.98447038,9.89144078 8.36005124,7.15466739 10.1892777,5.32544095 C11.7443127,3.77040588 13.9552129,3.26588995 15.9497475,3.80761184 Z"
+                fill="#000000"></path>
+              <path
+                d="M16.6568542,5.92893219 L18.0710678,7.34314575 C18.4615921,7.73367004 18.4615921,8.36683502 18.0710678,8.75735931 L16.6913928,10.1370344 C16.3008685,10.5275587 15.6677035,10.5275587 15.2771792,10.1370344 L13.8629656,8.7228208 C13.4724413,8.33229651 13.4724413,7.69913153 13.8629656,7.30860724 L15.2426407,5.92893219 C15.633165,5.5384079 16.26633,5.5384079 16.6568542,5.92893219 Z"
+                fill="#000000" opacity="0.3"></path>
+            </g>
+          </svg>
+          <h5>Web Maintenance</h5>
+          <p>We help to keep your website in good shape and give better impact to your audience</p>
+        </div>
+        <div class="col-lg-4 my-3 mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+            data-src="https://www.tianrosandhy.com/assets/images/icons/theme/shopping/chart-bar-2.svg">
+            <title>Icon For Chart-bar#2</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+              <rect fill="#000000" opacity="0.3" x="17" y="4" width="3" height="13" rx="1.5"></rect>
+              <rect fill="#000000" opacity="0.3" x="12" y="9" width="3" height="8" rx="1.5"></rect>
+              <path
+                d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z"
+                fill="#000000" fill-rule="nonzero"></path>
+              <rect fill="#000000" opacity="0.3" x="7" y="11" width="3" height="6" rx="1.5"></rect>
+            </g>
+          </svg>
+          <h5>Web Application</h5>
+          <p>We can create business logic application for your needs with web-based, so you can access them anytime
+            anywhere</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 text-center mb-3">
+          <h2>My Projects</h2>
+        </div>
+      </div>
+
+      <div data-flickity="{&quot;imagesLoaded&quot; : true, &quot;wrapAround&quot; : true, &quot;autoPlay&quot; : 2000}"
+        class="highlight-selected flickity-enabled is-draggable" tabindex="0">
+
+
+
+
+
+
+
+
+
+
+        <div class="flickity-viewport" style="height: 290px; touch-action: pan-y;">
+          <div class="flickity-slider" style="left: 0px; transform: translateX(-58.33%);">
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 0%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/jakarta-eye-center">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2022/04/jec-logo-small.jpg" alt="Jakarta Eye Center"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2022/04/jec-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/jakarta-eye-center"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Jakarta Eye Center</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 16.67%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/koperasi-pegawai-pasar-jaya">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2023/05/logo-pasar-jaya-small.jpg"
+                    alt="Koperasi Pegawai Pasar Jaya" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2023/05/logo-pasar-jaya-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/koperasi-pegawai-pasar-jaya"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Koperasi Pegawai Pasar Jaya</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 33.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/pgn-risk-management">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/pgn-logo-small.jpg" alt="PGN Risk Management"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2020/07/pgn-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/pgn-risk-management"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>PGN Risk Management</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 50%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/gkka-whatsapp-chatbot">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/08/gkka-chatbot-logo-small.jpg"
+                    alt="GKKA Registration System" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/08/gkka-chatbot-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/gkka-whatsapp-chatbot"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Whatsapp
+                      Chatbot</small><br><span>GKKA Registration System</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 66.67%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/pithecanthropus-bali">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/pithecanthropus-bali-logo-small.jpg"
+                    alt="Pithecanthropus Bali" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/pithecanthropus-bali-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/pithecanthropus-bali"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Maintenance</small><br><span>Pithecanthropus Bali</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 83.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/human-resource-system-citra-warna">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/citra-warna-logo-small.jpg"
+                    alt="Human Resource System Citra Warna" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/citra-warna-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/human-resource-system-citra-warna"
+                    class="font-weight-bold text-uppercase"><small class="text-dark">Web
+                      Application</small><br><span>Human Resource System Citra Warna</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6 is-selected"
+              style="position: absolute; left: 100%;">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/matapedia">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2022/10/logo-matapedia-small.jpg" alt="Matapedia"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2022/10/logo-matapedia-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/matapedia" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Web Application</small><br><span>Matapedia</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 116.67%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/simple-inventory">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/simple-inventory-logo-small.jpg"
+                    alt="Simple Inventory" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/simple-inventory-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/simple-inventory" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Software as a Service</small><br><span>Simple Inventory</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 133.33%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/bali-puspa-news">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/balipuspanews-logo-f3fb45c90b-small.jpg"
+                    alt="Bali Puspa News" style="width:100%;"
+                    src="https://tianrosandhy.com/storage/2020/07/balipuspanews-logo-f3fb45c90b-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/bali-puspa-news" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">Web Maintenance</small><br><span>Bali Puspa News</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell col-xl-2 col-lg-3 col-md-4 col-sm-5 col-xs-6"
+              style="position: absolute; left: 150%;" aria-hidden="true">
+              <div class="bg-whites">
+                <a href="https://www.tianrosandhy.com/13thshoes">
+                  <img class=" ls-is-cached lazyloaded"
+                    data-src="https://tianrosandhy.com/storage/2020/07/13thshoes-logo-small.jpg" alt="13thshoes"
+                    style="width:100%;" src="https://tianrosandhy.com/storage/2020/07/13thshoes-logo-small.jpg">
+                </a>
+                <div class="py-3 text-center">
+                  <a href="https://www.tianrosandhy.com/13thshoes" class="font-weight-bold text-uppercase"><small
+                      class="text-dark">e-Commerce</small><br><span>13thshoes</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><button class="flickity-button flickity-prev-next-button previous" type="button"
+          aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+          </svg></button><button class="flickity-button flickity-prev-next-button next" type="button"
+          aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+              transform="translate(100, 100) rotate(180) "></path>
+          </svg></button>
+        <ol class="flickity-page-dots">
+          <li class="dot" aria-label="Page dot 1"></li>
+          <li class="dot" aria-label="Page dot 2"></li>
+          <li class="dot" aria-label="Page dot 3"></li>
+          <li class="dot" aria-label="Page dot 4"></li>
+          <li class="dot" aria-label="Page dot 5"></li>
+          <li class="dot" aria-label="Page dot 6"></li>
+          <li class="dot is-selected" aria-label="Page dot 7" aria-current="step"></li>
+          <li class="dot" aria-label="Page dot 8"></li>
+          <li class="dot" aria-label="Page dot 9"></li>
+          <li class="dot" aria-label="Page dot 10"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary-3 text-white">
+    <div class="container">
+      <div class="row section-title justify-content-center text-center">
+        <div class="col-md-9 col-lg-8 col-xl-7">
+          <h2>Our Blog</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center blog-container" data-page="1">
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2023/09/pexels-database-denormalisasi-thumb.jpg"
+              alt="Denormalisasi Database: Tidak Selamanya Normalisasi itu Baik" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">1 week ago</div>
+              <a href="https://www.tianrosandhy.com/denormalisasi-database-tidak-selamanya-normalisasi-itu-baik">
+                <h3 class="h2">Denormalisasi Database: Tidak Selamanya Normalisasi itu Baik</h3>
+              </a>
+              <p>
+                Tentu kita sudah sering mendengar tentang "normalisasi" sebagai praktik penting dalam perancangan
+                database, akan tetapi ada pendekatan berbeda yang perlu dipertimbangkan yaitu : Denormalisasi.
+              </p>
+              <a href="https://www.tianrosandhy.com/denormalisasi-database-tidak-selamanya-normalisasi-itu-baik"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2023/05/pexels-ekaterina-belinskaya-4700400-thumb.jpg"
+              alt="Sistem Kasir Nota Digital Laundry dengan Whatsapp Chatbot" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">3 months ago</div>
+              <a href="https://www.tianrosandhy.com/sistem-nota-digital-laundry-dengan-whatsapp-chatbot">
+                <h3 class="h2">Sistem Kasir Nota Digital Laundry dengan Whatsapp Chatbot</h3>
+              </a>
+              <p>
+                Ucapkan selamat tinggal pada printer dan penggunaan kertas, dengan sistem nota digital ini Anda dapat
+                memberikan nota digital ke pelanggan usaha laundry Anda dengan 1 klik saja.
+              </p>
+              <a href="https://www.tianrosandhy.com/sistem-nota-digital-laundry-dengan-whatsapp-chatbot"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2022/11/pexels-lukas-669613-thumb.jpg"
+              alt="Sistem Survey &amp; Form Generator Online (Like Google Form)" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">9 months ago</div>
+              <a href="https://www.tianrosandhy.com/sistem-survey-form-generator-online-like-google-form">
+                <h3 class="h2">Sistem Survey &amp; Form Generator Online (Like Google Form)</h3>
+              </a>
+              <p>
+                Sistem Survey &amp; Form Generator Online merupakan sebuah sistem yang dirancang untuk mengumpulkan data
+                berupa formulir atau survey yang dapat kita rancang sendiri ke public secara anonim
+              </p>
+              <a href="https://www.tianrosandhy.com/sistem-survey-form-generator-online-like-google-form"
+                class="stretched-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-9 col-md-10 mb-3 mb-sm-5 aos-init" data-aos="fade-up" data-offset="200">
+          <div class="card card-body hover-box-shadow bg-white">
+            <img src="https://tianrosandhy.com/storage/2022/10/pexels-cottonbro-4709289-thumb.jpg"
+              alt="6 Prinsip Dasar Wajib Pemrograman" class="avatar mt-md-n5 mb-3">
+            <div>
+              <div class="text-muted mb-3">10 months ago</div>
+              <a href="https://www.tianrosandhy.com/6-prinsip-dasar-wajib-pemrograman">
+                <h3 class="h2">6 Prinsip Dasar Wajib Pemrograman</h3>
+              </a>
+              <p>
+                Programming adalah seni. Ketika kita coding sembarangan dengan tujuan hanya asal jadi, siap-siap saja
+                suatu saat nanti kita akan kesulitan sendiri karena codingan kita yang sembarangan dan sulit diref
+              </p>
+              <a href="https://www.tianrosandhy.com/6-prinsip-dasar-wajib-pemrograman" class="stretched-link">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" data-loadmore="">
+        <a href="https://www.tianrosandhy.com/blog" class="btn btn-primary">- Load More -</a>
+        <div class="loader-container text-center">
+          <div class="loader animated">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+              height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+              data-src="https://www.tianrosandhy.com/assets/images/icons/theme/navigation/waiting.svg">
+              <title>Icon For Waiting</title>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <path
+                  d="M19.5,10.5 L21,10.5 C21.8284271,10.5 22.5,11.1715729 22.5,12 C22.5,12.8284271 21.8284271,13.5 21,13.5 L19.5,13.5 C18.6715729,13.5 18,12.8284271 18,12 C18,11.1715729 18.6715729,10.5 19.5,10.5 Z M16.0606602,5.87132034 L17.1213203,4.81066017 C17.7071068,4.22487373 18.6568542,4.22487373 19.2426407,4.81066017 C19.8284271,5.39644661 19.8284271,6.34619408 19.2426407,6.93198052 L18.1819805,7.99264069 C17.5961941,8.57842712 16.6464466,8.57842712 16.0606602,7.99264069 C15.4748737,7.40685425 15.4748737,6.45710678 16.0606602,5.87132034 Z M16.0606602,18.1819805 C15.4748737,17.5961941 15.4748737,16.6464466 16.0606602,16.0606602 C16.6464466,15.4748737 17.5961941,15.4748737 18.1819805,16.0606602 L19.2426407,17.1213203 C19.8284271,17.7071068 19.8284271,18.6568542 19.2426407,19.2426407 C18.6568542,19.8284271 17.7071068,19.8284271 17.1213203,19.2426407 L16.0606602,18.1819805 Z M3,10.5 L4.5,10.5 C5.32842712,10.5 6,11.1715729 6,12 C6,12.8284271 5.32842712,13.5 4.5,13.5 L3,13.5 C2.17157288,13.5 1.5,12.8284271 1.5,12 C1.5,11.1715729 2.17157288,10.5 3,10.5 Z M12,1.5 C12.8284271,1.5 13.5,2.17157288 13.5,3 L13.5,4.5 C13.5,5.32842712 12.8284271,6 12,6 C11.1715729,6 10.5,5.32842712 10.5,4.5 L10.5,3 C10.5,2.17157288 11.1715729,1.5 12,1.5 Z M12,18 C12.8284271,18 13.5,18.6715729 13.5,19.5 L13.5,21 C13.5,21.8284271 12.8284271,22.5 12,22.5 C11.1715729,22.5 10.5,21.8284271 10.5,21 L10.5,19.5 C10.5,18.6715729 11.1715729,18 12,18 Z M4.81066017,4.81066017 C5.39644661,4.22487373 6.34619408,4.22487373 6.93198052,4.81066017 L7.99264069,5.87132034 C8.57842712,6.45710678 8.57842712,7.40685425 7.99264069,7.99264069 C7.40685425,8.57842712 6.45710678,8.57842712 5.87132034,7.99264069 L4.81066017,6.93198052 C4.22487373,6.34619408 4.22487373,5.39644661 4.81066017,4.81066017 Z M4.81066017,19.2426407 C4.22487373,18.6568542 4.22487373,17.7071068 4.81066017,17.1213203 L5.87132034,16.0606602 C6.45710678,15.4748737 7.40685425,15.4748737 7.99264069,16.0606602 C8.57842712,16.6464466 8.57842712,17.5961941 7.99264069,18.1819805 L6.93198052,19.2426407 C6.34619408,19.8284271 5.39644661,19.8284271 4.81066017,19.2426407 Z"
+                  fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-dark text-white" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-xs-11 text-center">
+          <h2>Contact Us</h2>
+          <p class="lead">Do you have some question, or project you wanna discuss with me? <mark
+              data-aos="highlight-text" data-aos-delay="1000" class="aos-init">Please fill the form, or chat me
+              now.</mark></p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-11">
+          <div class="text-center after-send-contact" style="display:none;">
+            <div class="alert alert-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                data-src="https://www.tianrosandhy.com/assets/images/icons/theme/communication/sending-mail.svg">
+                <title>Icon For Sending mail</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                  <path
+                    d="M4,16 L5,16 C5.55228475,16 6,16.4477153 6,17 C6,17.5522847 5.55228475,18 5,18 L4,18 C3.44771525,18 3,17.5522847 3,17 C3,16.4477153 3.44771525,16 4,16 Z M1,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L1,13 C0.44771525,13 6.76353751e-17,12.5522847 0,12 C-6.76353751e-17,11.4477153 0.44771525,11 1,11 Z M3,6 L5,6 C5.55228475,6 6,6.44771525 6,7 C6,7.55228475 5.55228475,8 5,8 L3,8 C2.44771525,8 2,7.55228475 2,7 C2,6.44771525 2.44771525,6 3,6 Z"
+                    fill="#000000" opacity="0.3"></path>
+                  <path
+                    d="M10,6 L22,6 C23.1045695,6 24,6.8954305 24,8 L24,16 C24,17.1045695 23.1045695,18 22,18 L10,18 C8.8954305,18 8,17.1045695 8,16 L8,8 C8,6.8954305 8.8954305,6 10,6 Z M21.0849395,8.0718316 L16,10.7185839 L10.9150605,8.0718316 C10.6132433,7.91473331 10.2368262,8.02389331 10.0743092,8.31564728 C9.91179228,8.60740125 10.0247174,8.9712679 10.3265346,9.12836619 L15.705737,11.9282847 C15.8894428,12.0239051 16.1105572,12.0239051 16.294263,11.9282847 L21.6734654,9.12836619 C21.9752826,8.9712679 22.0882077,8.60740125 21.9256908,8.31564728 C21.7631738,8.02389331 21.3867567,7.91473331 21.0849395,8.0718316 Z"
+                    fill="#000000"></path>
+                </g>
+              </svg>
+              <h5>Thank You</h5>
+              <p>Your message has been sent, we will check them later.</p>
+            </div>
+          </div>
+          <form action="" class="contact-form" method="post">
+            <input type="hidden" name="_token" value="LQjg6JoVnBkZm27CqiXc0ydjl3Kly3M55vREkchr">
+            <input type="hidden" name="a"
+              value="eyJpdiI6Im84TEJVWW9mMEkvSnNWWG5aTnE0OUE9PSIsInZhbHVlIjoiYncrOXFvUE1mNEI2V2FzRkMxZW05Zz09IiwibWFjIjoiNzhjYzBmMDc0YzdkMDRiOGNlZmQ5NjU4ZjhmMGNhN2RjNWQ4NGM0ZjNjZjExOTA0MTAzYzI2MWU1ZTdlMTIwYiJ9">
+            <input type="text" name="b" class="form-control" tabindex="-1" style="position:absolute; left:-78126px;">
+            <input type="hidden" name="c"
+              value="eyJpdiI6IkU0UUkvK3ordmZBRGJJamRyVTFrVHc9PSIsInZhbHVlIjoiZlF2a3J2bU9lajdIckQyQkVwa2Jtem1VaXd3YWpOZ3AzRU9LRGxkeGl0Y2tDb1o4SisvZUJncVdBcDdybFVyaCIsIm1hYyI6ImY5NDE4OTVmZjQ0MmU2ZjlkZWYwZGI5NWE4M2M3OGQ1YjhmYzU3YzZkNmFhYTc2MWYxOGMwM2ViYjNiNTJiYTQifQ==">
+
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="mandatory">Full Name</label>
+                  <input data-required="" type="text" name="full_name" class="form-control" maxlength="50">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                  <label class="mandatory">Your Email</label>
+                  <input data-required="" type="email" name="email" class="form-control" maxlength="50">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="phone" class="form-control" maxlength="15">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="mandatory">Your Message</label>
+              <textarea data-required="" name="message" maxlength="500" class="form-control"
+                placeholder="Type your message here" data-gramm="false" wt-ignore-input="true"></textarea>
+            </div>
+            <div class="padd my-3 text-right contact-buttons">
+              <!-- <a href="#" class="btn btn-success btn-chat-whatsapp">Chat via Whatsapp</a> -->
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </div>
+            <div class="loader-container text-right">
+              <div class="loader animated">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                  height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon bg-primary"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/theme/navigation/waiting.svg">
+                  <title>Icon For Waiting</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <path
+                      d="M19.5,10.5 L21,10.5 C21.8284271,10.5 22.5,11.1715729 22.5,12 C22.5,12.8284271 21.8284271,13.5 21,13.5 L19.5,13.5 C18.6715729,13.5 18,12.8284271 18,12 C18,11.1715729 18.6715729,10.5 19.5,10.5 Z M16.0606602,5.87132034 L17.1213203,4.81066017 C17.7071068,4.22487373 18.6568542,4.22487373 19.2426407,4.81066017 C19.8284271,5.39644661 19.8284271,6.34619408 19.2426407,6.93198052 L18.1819805,7.99264069 C17.5961941,8.57842712 16.6464466,8.57842712 16.0606602,7.99264069 C15.4748737,7.40685425 15.4748737,6.45710678 16.0606602,5.87132034 Z M16.0606602,18.1819805 C15.4748737,17.5961941 15.4748737,16.6464466 16.0606602,16.0606602 C16.6464466,15.4748737 17.5961941,15.4748737 18.1819805,16.0606602 L19.2426407,17.1213203 C19.8284271,17.7071068 19.8284271,18.6568542 19.2426407,19.2426407 C18.6568542,19.8284271 17.7071068,19.8284271 17.1213203,19.2426407 L16.0606602,18.1819805 Z M3,10.5 L4.5,10.5 C5.32842712,10.5 6,11.1715729 6,12 C6,12.8284271 5.32842712,13.5 4.5,13.5 L3,13.5 C2.17157288,13.5 1.5,12.8284271 1.5,12 C1.5,11.1715729 2.17157288,10.5 3,10.5 Z M12,1.5 C12.8284271,1.5 13.5,2.17157288 13.5,3 L13.5,4.5 C13.5,5.32842712 12.8284271,6 12,6 C11.1715729,6 10.5,5.32842712 10.5,4.5 L10.5,3 C10.5,2.17157288 11.1715729,1.5 12,1.5 Z M12,18 C12.8284271,18 13.5,18.6715729 13.5,19.5 L13.5,21 C13.5,21.8284271 12.8284271,22.5 12,22.5 C11.1715729,22.5 10.5,21.8284271 10.5,21 L10.5,19.5 C10.5,18.6715729 11.1715729,18 12,18 Z M4.81066017,4.81066017 C5.39644661,4.22487373 6.34619408,4.22487373 6.93198052,4.81066017 L7.99264069,5.87132034 C8.57842712,6.45710678 8.57842712,7.40685425 7.99264069,7.99264069 C7.40685425,8.57842712 6.45710678,8.57842712 5.87132034,7.99264069 L4.81066017,6.93198052 C4.22487373,6.34619408 4.22487373,5.39644661 4.81066017,4.81066017 Z M4.81066017,19.2426407 C4.22487373,18.6568542 4.22487373,17.7071068 4.81066017,17.1213203 L5.87132034,16.0606602 C6.45710678,15.4748737 7.40685425,15.4748737 7.99264069,16.0606602 C8.57842712,16.6464466 8.57842712,17.5961941 7.99264069,18.1819805 L6.93198052,19.2426407 C6.34619408,19.8284271 5.39644661,19.8284271 4.81066017,19.2426407 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary-3 text-white links-white py-3 footer-1">
+    <div class="container">
+      <div
+        class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+        <div class="col-auto">
+          <div class="d-flex flex-column flex-sm-row align-items-center text-small">
+            <div class="text-muted">© 2023 Page protected by reCAPTCHA and subject to Google's <a
+                href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy</a> and <a
+                href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto mt-3 mt-lg-0">
+          <ul class="list-unstyled d-flex mb-0">
+            <li class="mx-3">
+              <a href="https://github.com/tianrosandhy" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/github.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="https://facebook.com/tianEXE" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/facebook.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M13.789 23.9943V13.0493H17.3269L17.8566 8.78383H13.789V6.06047C13.789 4.82555 14.1192 3.98389 15.8248 3.98389L18 3.98284V0.167893C17.6236 0.1161 16.3325 0 14.8304 0C11.6942 0 9.54712 1.98771 9.54712 5.63825V8.78395H6V13.0494H9.54701V23.9944L13.789 23.9943Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="https://instagram.com/tianrosandhy" class="hover-fade-out">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="injected-svg icon icon-xs bg-white"
+                  data-src="https://www.tianrosandhy.com/assets/images/icons/social/instagram.svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M12 0C8.74 0 8.333 0.015 7.053 0.072C5.775 0.132 4.905 0.333 4.14 0.63C3.351 0.936 2.681 1.347 2.014 2.014C1.347 2.681 0.935 3.35 0.63 4.14C0.333 4.905 0.131 5.775 0.072 7.053C0.012 8.333 0 8.74 0 12C0 15.26 0.015 15.667 0.072 16.947C0.132 18.224 0.333 19.095 0.63 19.86C0.936 20.648 1.347 21.319 2.014 21.986C2.681 22.652 3.35 23.065 4.14 23.37C4.906 23.666 5.776 23.869 7.053 23.928C8.333 23.988 8.74 24 12 24C15.26 24 15.667 23.985 16.947 23.928C18.224 23.868 19.095 23.666 19.86 23.37C20.648 23.064 21.319 22.652 21.986 21.986C22.652 21.319 23.065 20.651 23.37 19.86C23.666 19.095 23.869 18.224 23.928 16.947C23.988 15.667 24 15.26 24 12C24 8.74 23.985 8.333 23.928 7.053C23.868 5.776 23.666 4.904 23.37 4.14C23.064 3.351 22.652 2.681 21.986 2.014C21.319 1.347 20.651 0.935 19.86 0.63C19.095 0.333 18.224 0.131 16.947 0.072C15.667 0.012 15.26 0 12 0ZM12 2.16C15.203 2.16 15.585 2.176 16.85 2.231C18.02 2.286 18.655 2.48 19.077 2.646C19.639 2.863 20.037 3.123 20.459 3.542C20.878 3.962 21.138 4.361 21.355 4.923C21.519 5.345 21.715 5.98 21.768 7.15C21.825 8.416 21.838 8.796 21.838 12C21.838 15.204 21.823 15.585 21.764 16.85C21.703 18.02 21.508 18.655 21.343 19.077C21.119 19.639 20.864 20.037 20.444 20.459C20.025 20.878 19.62 21.138 19.064 21.355C18.644 21.519 17.999 21.715 16.829 21.768C15.555 21.825 15.18 21.838 11.97 21.838C8.759 21.838 8.384 21.823 7.111 21.764C5.94 21.703 5.295 21.508 4.875 21.343C4.306 21.119 3.915 20.864 3.496 20.444C3.075 20.025 2.806 19.62 2.596 19.064C2.431 18.644 2.237 17.999 2.176 16.829C2.131 15.569 2.115 15.18 2.115 11.985C2.115 8.789 2.131 8.399 2.176 7.124C2.237 5.954 2.431 5.31 2.596 4.89C2.806 4.32 3.075 3.93 3.496 3.509C3.915 3.09 4.306 2.82 4.875 2.611C5.295 2.445 5.926 2.25 7.096 2.19C8.371 2.145 8.746 2.13 11.955 2.13L12 2.16ZM12 5.838C8.595 5.838 5.838 8.598 5.838 12C5.838 15.405 8.598 18.162 12 18.162C15.405 18.162 18.162 15.402 18.162 12C18.162 8.595 15.402 5.838 12 5.838ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16ZM19.846 5.595C19.846 6.39 19.2 7.035 18.406 7.035C17.611 7.035 16.966 6.389 16.966 5.595C16.966 4.801 17.612 4.156 18.406 4.156C19.199 4.155 19.846 4.801 19.846 5.595Z"
+                    fill="#2C3038"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6289622224614" style="position:fixed; bottom:2rem; left:2rem; z-index:2"
+    title="Chat via Whatsapp" data-toggle="tooltip" data-placement="right">
+    <img src="https://www.tianrosandhy.com/assets/images/icons/social/whatsapp.svg" width="45" height="45">
+  </a>
+
+  <div id="offline-overlay" style="display:none;"></div>
+
+  <!-- service worker notification alert -->
+  <div id="notification-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="notification-title">New Updates are available</p>
+        </div>
+        <div class="col-sm-6 text-right">
+          <a href="#" class="btn btn-sm btn-primary refresh-btn">Refresh</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- service worker offline/online notification -->
+  <div id="offline-notification" class="online">
+    <div class="offline-wrapper bg-danger text-white">
+      <div class="container-fluid">
+        Oops, your internet is disconnected. Please check your signal
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="https://www.tianrosandhy.com/search" class="site-search">
+            <div class="input-group">
+              <input type="search" maxlength="30" required="" name="keyword" class="form-control"
+                placeholder="Type your search keyword here">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top aos-init" data-smooth-scroll=""
+    data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      class="injected-svg icon bg-white"
+      data-src="https://www.tianrosandhy.com/assets/images/icons/interface/icon-arrow-up.svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M5 12L12 5L19 12M12 19V6V19Z" stroke="#2C3038" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </a>
+  <script src="https://www.tianrosandhy.com/assets/js/aio.js?v=1.0.0"></script>
+  <link rel="stylesheet" type="text/css" href="https://www.tianrosandhy.com/xoric/libs/prism/prism.css">
+  <script src="https://www.tianrosandhy.com/xoric/libs/prism/prism.js"></script>
+
+  <!-- Removes page load animation when window is finished loading -->
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      document.querySelector('body').classList.add('loaded');
+    });
+    var BASE_URL = 'https://www.tianrosandhy.com';
+    var CSRF_TOKEN = 'LQjg6JoVnBkZm27CqiXc0ydjl3Kly3M55vREkchr';
+    $(function () {
+      $("head").append('<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">');
+    });
+  </script>
+
+  <script>
+    if (navigator) {
+      var ONLINE_STAT = navigator.onLine ?? false;
+    }
+    else {
+      var ONLINE_STAT = true;
+    }
+    window.addEventListener('online', (evt) => {
+      if (!window.ONLINE_STAT) {
+        //change to online action
+        $("#offline-overlay").fadeOut();
+        $("#offline-notification").addClass('online');
+      }
+      window.ONLINE_STAT = true;
+    });
+    window.addEventListener('offline', (evt) => {
+      if (window.ONLINE_STAT) {
+        //change to offline action
+        $("#offline-overlay").fadeIn();
+        $("#offline-notification").removeClass('online');
+      }
+      window.ONLINE_STAT = false;
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>
